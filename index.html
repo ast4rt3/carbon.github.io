@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+
+
+</head>
+<body class="w3-black">
+  
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+   
+  <img src="https://www.pngkit.com/png/full/346-3465864_roblox-man-face-meme.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#usage" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>USAGE SUMMARY</p>
+  </a>
+  <a href="#graph" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>GRAPH</p>
+  </a>
+  <script>
+    // Get all the navigation links
+    const navLinks = document.querySelectorAll('.w3-bar-item.w3-button');
+  
+    // Loop through each link and add a click event listener
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Remove the active class from all links
+        navLinks.forEach(item => item.classList.remove('active'));
+  
+        // Add the active class to the clicked link
+        this.classList.add('active');
+      });
+    });
+  </script>
+  
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#usage" class="w3-bar-item w3-button" style="width:25% !important">USAGE SUMMARY</a>
+    <a href="#graph" class="w3-bar-item w3-button" style="width:25% !important">GRAPH</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Lawrence Heras</h1>
+    <p>A carbon footprint measures the total amount of greenhouse gases (GHGs), primarily carbon dioxide (CO₂), that are released into the atmosphere as a result of an individual’s or organization’s activities. These emissions are usually expressed in equivalent tons of CO₂ (CO₂e) and encompass a wide range of activities, from transportation and energy usage to dietary choices and consumption habits.
+
+        Understanding one’s carbon footprint is crucial because it provides insight into the environmental impact of daily activities. By identifying key sources of emissions, individuals can take targeted actions to reduce their contribution to climate change.</p>
+    <img src="https://www.textures4photoshop.com/tex/thumbs/white-smoke-PNG-transparent-thumb27.png" alt="boy" class="w3-image" width="600" height="700">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="usage">
+    <h2 class="w3-text-light-grey" style="font-weight: bold;">Importance of Tracking Individual Emissions</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <ul>
+        <li><strong>Raise Awareness:</strong> Understand how everyday actions, like commuting or using electronic devices, contribute to global emissions.</li>
+        <li><strong>Encourage Responsibility:</strong> Empower individuals to make sustainable choices that reduce environmental harm.</li>
+        <li><strong>Promote Change:</strong> Small, conscious changes—such as reducing energy consumption or choosing public transportation—can collectively make a significant impact.</li>
+        <li><strong>Support Sustainability Goals:</strong> Align personal habits with broader efforts to combat climate change, such as the United Nations’ Sustainable Development Goals (SDGs).</li>
+      </ul>
+      <p>By tracking and analyzing personal emissions, we take the first step toward reducing our impact and fostering a more sustainable future.</p>
+      
+      <h2>My Weekly Carbon Footprint</h2>
+      <div class="usage-summary">
+        <div class="day">
+          <h3>Monday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Commute:</strong> 8 km by motorcycle (1.6 kg CO₂e)</li>
+            <li><strong>Electricity:</strong> 4 kWh (2.8 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Tuesday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Commute:</strong> 8 km by motorcycle (1.6 kg CO₂e)</li>
+            <li><strong>Meals:</strong> Meat-based (2.5 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Wednesday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Commute:</strong> 8 km by motorcycle (1.6 kg CO₂e)</li>
+            <li><strong>Streaming Services:</strong> 2 hours (0.16 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Thursday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Commute:</strong> 8 km by motorcycle (1.6 kg CO₂e)</li>
+            <li><strong>Electricity:</strong> 3 kWh (2.1 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Friday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Commute:</strong> 8 km by motorcycle (1.6 kg CO₂e)</li>
+            <li><strong>Meals:</strong> Meat-based (2.5 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Saturday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Leisure Travel:</strong> 10 km by motorcycle (2 kg CO₂e)</li>
+            <li><strong>Electricity:</strong> 5 kWh (3.5 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+        <div class="day">
+          <h3>Sunday</h3>
+          <ul>
+            <li><strong>Phone Usage:</strong> 5.35 hours (0.07 kg CO₂e)</li>
+            <li><strong>Streaming Services:</strong> 3 hours (0.24 kg CO₂e)</li>
+            <li><strong>Family Cooking:</strong> 2 hours (3 kg CO₂e)</li>
+          </ul>
+        </div>
+        
+    </div><br>
+    
+    <div class="total-summary" id="graph">
+      <h2>Weekly Carbon Footprint Summary</h2>
+      <ul>
+        <li><strong>Total Phone Usage:</strong> 37.45 hours (0.49 kg CO₂e)</li>
+        <li><strong>Total Motorcycle Commute:</strong> 48 km (9.6 kg CO₂e)</li>
+        <li><strong>Total Electricity Consumption:</strong> 24 kWh (16.8 kg CO₂e)</li>
+        <li><strong>Meals and Cooking:</strong> ~11 kg CO₂e</li>
+        <li><strong>Streaming Services:</strong> 5 hours (0.4 kg CO₂e)</li>
+      </ul>
+      <p><strong>Total Weekly Emissions:</strong> 38.29 kg CO₂e</p>
+    </div>
+    
+
+    <div class="graph-container">
+      <canvas id="carbonChart" width="400" height="200"></canvas>
+      <script>
+        const ctx = document.getElementById('carbonChart').getContext('2d');
+        const carbonChart = new Chart(ctx, {
+          type: 'bar', // You can change this to 'line', 'pie', etc.
+          data: {
+            labels: ['Phone Usage', 'Ride', 'Electricity', 'Meals', 'Streaming'],
+            datasets: [{
+              label: 'Weekly Carbon Footprint (kg CO₂e)',
+              data: [0.49, 9.6, 16.8, 11, 0.4],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)'
+              ],
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+              ],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      
+    </div>
+    
+
+    
+   
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin: 0 -10px; overflow-x: auto;">
+      <div class="w3-half image-container">
+        <div style="color: white;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEX/Y4S953ZqAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC" class="image-item">Phone Usage</div>
+        <div style="color: white;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEU2oussdUFjAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC" class="image-item">Ride</div>
+        <div style="color: white;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEX/zlbOkwc2AAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC" class="image-item">Electricity</div>
+        <div style="color: white;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEVLwMCLK0oFAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC" class="image-item">Meals</div>
+        <div style="color: white;"><img src="https://www.schemecolor.com/images/color-image-thumb.php?tx&n=Violets%20Are%20Blue&w=250&h=250&hex=9966FF" class="image-item">Streaming</div>
+      </div>
+    </div>
+    
+
+      <img src="https://cdn.custom-cursor.com/packs/10125/memes-chill-guy-pack.png" style="width:50%">
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+   <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+  </div>
+  <footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
+        </div>
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
